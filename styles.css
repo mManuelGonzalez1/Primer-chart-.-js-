@@ -1,0 +1,118 @@
+:root{
+    --font-family: "DM Sans", sans-serif;
+    --font-size:1.6rem;
+    --Red-500: hsl(10, 79%, 65%);
+    --Blue-300: hsl(186, 34%, 65%);
+    --Brown-950: hsl(25, 47%, 15%);
+    --Brown-400: hsl(28, 10%, 53%);
+    --Red-100: hsl(26, 66%, 93%);
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;/* esto funciona para que el padding no haga mas grande el elemento*/
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--Red-100);
+    padding: 5rem 1rem;
+}
+
+.section-balance{
+    background-color: var(--Red-500);
+    color: white;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.title-balance p,h2{
+    margin:0;
+    line-height: 3rem;   
+}
+.section-chart{
+    background-color: white;
+    border-radius: 1.5rem;
+    line-height: 3.5rem;
+    padding: 2rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--Brown-950);
+     
+}
+.section-chart h1{
+font-size: 2.5rem;
+margin-top: 0;
+font-weight: 700;
+
+}
+canvas{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--Red-100); 
+    cursor: pointer;   
+}
+.metrycs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2.5rem;
+    padding: 1rem;
+}
+.Total-month-expenses p{
+    color: var(--Brown-400);
+    margin: 0;
+}
+.comparative-last-month{
+text-align: end;
+} 
+.comparative-last-month p{
+   margin-top: 2.5rem;
+   margin-bottom: 0;
+    font-weight: 700;
+}
+.comparative-last-month p:last-child{
+    margin: 0;
+    color: var(--Brown-400);
+    font-weight: 400;
+}
+footer{
+    display:none;
+}
+@media (min-width:1000px){
+    body{
+        display: block;
+        height: 100vh;
+        margin-top:8rem ;
+    }
+    .section-balance, .section-chart{
+        margin: 2rem auto;
+    }
+    .section-balance, .section-chart{
+        width: 55rem;
+        height: fit-content;
+    }
+    footer{
+        display:block;
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: 1.2rem;
+        color: var(--Brown-400);
+        margin-top: 2rem;
+    }
+    footer a{
+        color: var(--Brown-400);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+
+    
+    
+
+}
+
